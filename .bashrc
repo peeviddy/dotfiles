@@ -5,5 +5,11 @@
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 
-alias ll='eza --no-user --icons -al'
-alias lg='lazygit'
+alias lt='eza --tree --level=2 --long --icons --git --no-user'
+alias ll='eza -lh --group-directories-first --icons=auto --no-user'
+alias lla='ll -a'
+alias lta='lt -a'
+
+if command -v lazygit >/dev/null 2>&1; then
+  alias lg='lazygit'
+fi

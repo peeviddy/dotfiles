@@ -1,14 +1,8 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
+# If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias ll='ls --color=auto -alh'
+source ~/.local/share/omarchy/default/rc
+
+alias ll='eza --no-user --icons -al'
+alias tree='eza --no-user --tree -a -L3'
 alias lg='lazygit'
-alias vi='nvim'
-PS1='\w > '
-color_prompt=yes
